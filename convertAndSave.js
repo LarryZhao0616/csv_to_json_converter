@@ -5,7 +5,8 @@ var path = require('path');
 var csv = require('fast-csv');
 var mongoose = require('mongoose');
 var moment = require('moment');
-//use fast-csv to read file stream, monggose to connect mongodb, moment to create a save time tag
+var junk = require('junk');
+//use fast-csv to read file stream, monggose to connect mongodb, moment to create a save time tag, use junk to ignore .ds_store when saving images in mac.
 
 //*************require your mlab keys**************//
 const { mLab } = require('./keys.js');
@@ -34,6 +35,7 @@ if(imgdirpath){
 	fs.readdir(dir, function(err, list) {
 	    //	console.log(list);
 	    if (err) return done(err);
+	    list=list.filter(junk.not);
 	    var pending = list.length;
 	    if (!pending) return done(null, results);
 	    list.forEach(function(file) {

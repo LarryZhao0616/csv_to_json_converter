@@ -2,15 +2,20 @@
   "name": "csv_to_json_converter",
   "version": "1.0.0",
   "description": "This is a converter which could save csv file to mongoDB through mlab",
-  "main": "saveHousetomongo.js",
+  "main": "convertAndSave.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
   "dependencies": {
     "fast-csv": "^2.4.1",
+    "junk": "^2.1.0",
     "moment": "^2.19.4",
     "mongoose": "^4.13.7"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node saveHouseToMongo.js [csv file path] [picture folder path(optional)]"
+    "test": "node convertAndsave.js [csv file path] [picture folder path(optional)]"
   },
   "author": "Sihan (Larry) Zhao  zhsh0616@gmail.com",
   "license": "MIT"
