@@ -11,7 +11,8 @@
     "fast-csv": "^2.4.1",
     "junk": "^2.1.0",
     "moment": "^2.19.4",
-    "mongoose": "^4.13.7"
+    "mongoose": "^4.13.7",
+    "mongoose-currency": "^0.2.0"
   },
   "devDependencies": {},
   "scripts": {

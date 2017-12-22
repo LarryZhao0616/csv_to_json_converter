@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+require('mongoose-currency').loadType(mongoose);
+const Currency = mongoose.Types.Currency;
+//use Currency as a data type(https://www.npmjs.com/package/mongoose-currency)
 
 const HouseSchema = new Schema({
     house_id : String,
@@ -10,7 +13,7 @@ const HouseSchema = new Schema({
     baths: String,
     sqft : String,
     lot : String,
-    price_per_sqft : String,
+    price_per_sqft : Currency,
     descriptions_short : [String],
     description : String,
     bedrooms : [String],
